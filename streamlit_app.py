@@ -14,7 +14,7 @@ st.title("OpenCV Deep Learning based Face Detection")
 img_file_buffer = st.file_uploader("Choose a file",type=["jpg","jpeg","png"])
 
 def load_model():
-    net = cv2.dnn.readNetFromCaffe("C:/Users/SP.000/Downloads/m6/Applications/model/deploy.prototxt","C:/Users/SP.000/Downloads/m6/Applications/model/res10_300x300_ssd_iter_140000.caffemodel")
+    net = cv2.dnn.readNetFromCaffe("deploy.prototxt","res10_300x300_ssd_iter_140000.caffemodel")
     return net
 
 def detectFaceOpenCVDNN(frame,net):
